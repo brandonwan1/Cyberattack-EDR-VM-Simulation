@@ -39,5 +39,18 @@ Ubuntu VM -
 - Install the Sliver adverserial framework 
 ![11-install-sliver](https://github.com/user-attachments/assets/32e189e7-8fc8-43cd-b2e8-ab0790ddd670)
 
+## Attacking the Windows machine
+- Generate the C2 payload via Sliver silver and send it to the Windows machine
+![13-gen-send-c2-payload](https://github.com/user-attachments/assets/f39cfe35-f05b-4dab-b2d7-b42fc6b4c6f1)
+
+- Start an HTTP listener via Sliver on the attack machine. The Windows machine will execute the payload, starting the C2 session. The attacker can now gather information on the endpoint such as prvileges, and the security products protecting the system.
+![14-c2-started](https://github.com/user-attachments/assets/51bbca4f-6629-4dde-95c6-9e760723513c)
+![15-output-pst-cmd](https://github.com/user-attachments/assets/eb08a945-4ffc-4e34-a762-bf7fa9972d86)
+
+## Observe EDR Telemetry in LimaCharlie
+Gather information regarding the attack by observing the sensor logs
+![20-windows-telemetry](https://github.com/user-attachments/assets/2e86e6be-faaa-4eff-a3f8-c9acec0045d6)
+Query the VirusTotal database for the hash of the C2 payload. Since the payload was just created, VirusTotal will not have recognized it.
+![19-no-hash-found](https://github.com/user-attachments/assets/1556ff32-35dc-4329-9e88-6ba75be39a8b)
 
 
