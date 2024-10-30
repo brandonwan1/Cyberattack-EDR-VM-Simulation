@@ -10,5 +10,6 @@ The dump file was saved as **lsass.dmp** on my attack machine. I then transferre
 
 For processing the file, I used **pypykatz**, a Python implementation of the post-exploitation tool called Mimikatz. Running pypykatz revealed the names of the users along with their NTLM password hashes.
 
-Rather than brute-forcing, I looked up the hash on a rainbow table, revealing the decrypted password that I had set for the Windows VM:
+Rather than brute-forcing, I looked up the hash on a rainbow table, revealing the original password that I had set for the Windows VM in plaintext:
+
   ![hash-cracked](https://github.com/user-attachments/assets/a209f991-d7eb-449e-b3d8-9776ef5d225e)
